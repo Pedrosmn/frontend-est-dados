@@ -6,7 +6,18 @@ import { Trees } from './pages/Trees';
 import Hashing from './pages/Hashing';
 import List from './pages/List';
 
+import { useEffect } from 'react';
+
+
 const App = () => {
+  const apiUrl = `${import.meta.env.VITE_API_URL}/api/oi`;
+
+  useEffect(() => {
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
+
   return (
     <Router>
       <NavBar />
@@ -21,5 +32,3 @@ const App = () => {
     </Router>
   );
 };
-
-export default App;
