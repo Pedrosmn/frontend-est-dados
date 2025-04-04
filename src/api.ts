@@ -1,4 +1,4 @@
-const API_URL = "https://backend-est-dados.onrender.com"; // Substitua pela URL do Render
+const API_URL = import.meta.env.VITE_API_URL; // Substitua pela URL do Render
 
 export const fetchAlgorithms = async () => {
     try {
