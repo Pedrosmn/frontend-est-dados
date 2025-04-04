@@ -10,7 +10,7 @@ export const BSTTree = () => {
   const generateTree = async () => {
     setLoading(true);
     try {
-      const response = await fetch('${API_URL}/generate_tree', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/generate_tree`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
