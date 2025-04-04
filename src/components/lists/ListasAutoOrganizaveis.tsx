@@ -43,7 +43,7 @@ export const ListasAutoOrganizadas = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await fetch('http://localhost:5000/generate_list', {
+      const response = await fetch('${API_URL}/generate_list', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -87,7 +87,7 @@ export const ListasAutoOrganizadas = () => {
         throw new Error("Por favor, insira um número válido");
       }
   
-      const response = await fetch('http://localhost:5000/generate_list', {
+      const response = await fetch('${API_URL}/generate_list', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
