@@ -8,7 +8,7 @@ export const HashingUniversal = () => {
     const generateHashing = async () => {
     setLoading(true);
     try {
-        const response = await fetch('http://localhost:5000/generate_hashing', {
+        const response = await fetch('${API_URL}/generate_hashing', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
