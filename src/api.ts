@@ -1,4 +1,4 @@
-const API_URL = "https://seu-app.onrender.com"; // Substitua pela URL do Render
+const API_URL = "https://backend-est-dados.onrender.com"; // Substitua pela URL do Render
 
 export const fetchAlgorithms = async () => {
     try {
